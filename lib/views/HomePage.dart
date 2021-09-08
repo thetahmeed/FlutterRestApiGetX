@@ -6,5 +6,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
+  AppBar mAppBar() {
+    return AppBar(
+      title: Text('mShop'),
+      centerTitle: true,
+      elevation: 0,
+      leading: Icon(
+        Icons.arrow_back_ios,
+      ),
+      actions: [
+        IconButton(
+          icon: Icon(
+            Icons.shopping_cart,
+          ),
+          onPressed: () {},
+        )
+      ],
+    );
   }
 }
