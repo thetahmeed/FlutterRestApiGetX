@@ -64,8 +64,8 @@ class Product {
         productLink: json["product_link"],
         websiteLink: json["website_link"],
         description: json["description"],
-        rating: json["rating"] == null ? null : json["rating"].toDouble(),
-        category: json["category"] == null ? null : json["category"],
+        rating: json["rating"] == null ? 0.0 : json["rating"].toDouble(),
+        category: json["category"] == null ? 'null' : json["category"],
         productType: json["product_type"],
         tagList: List<dynamic>.from(json["tag_list"].map((x) => x)),
         createdAt: DateTime.parse(json["created_at"]),
@@ -111,7 +111,7 @@ class ProductColor {
 
   factory ProductColor.fromJson(Map<String, dynamic> json) => ProductColor(
         hexValue: json["hex_value"],
-        colourName: json["colour_name"] == null ? null : json["colour_name"],
+        colourName: json["colour_name"] == null ? 'null' : json["colour_name"],
       );
 
   Map<String, dynamic> toJson() => {
