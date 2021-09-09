@@ -8,6 +8,11 @@ import 'components/SingleProductModel.dart';
 class HomePage extends StatelessWidget {
   final ProductController productController = Get.put(ProductController());
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: mAppBar(),
+  }
   AppBar mAppBar() {
     return AppBar(
       backgroundColor: Colors.transparent,
