@@ -6,4 +6,5 @@ import 'package:get/get.dart';
 import 'components/SingleProductModel.dart';
 
 class HomePage extends StatelessWidget {
+  final ProductController productController = Get.put(ProductController());
 }
